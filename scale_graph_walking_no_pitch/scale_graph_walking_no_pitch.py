@@ -1,5 +1,6 @@
 import random
 from flask import jsonify
+from scale_graph_walking_no_pitch.constants import Amajor_matrix_no_pitch as Amajor
 
 # start of the sequence to be returned by the API
 global sequence_start
@@ -58,19 +59,10 @@ intervals = {
     5: 2,  # seventh
 }
 
-Amajor = {'A': ['B', 'Db', 'D', 'E', 'Gb', 'Ab'],
-          'B': ['Db', 'D', 'E', 'Gb', 'Ab', 'A'],
-          'Db': ['D', 'E', 'Gb', 'Ab', 'A', 'B'],
-          'D': ['E', 'Gb', 'Ab', 'A', 'B', 'Db'],
-          'E': ['Gb', 'Ab', 'A', 'B', 'Db', 'D'],
-          'Gb': ['Ab', 'A', 'B', 'Db', 'D', 'E'],
-          'Ab': ['A', 'B', 'Db', 'D', 'E', 'Gb']}
-
 
 # reset sequence start and end
 sequence_start = list(Amajor.keys())[random.randint(0, len(Amajor.keys()) - 1)]
 sequence_end = list(Amajor.keys())[random.randint(0, len(Amajor.keys()) - 1)]
-
 
 
 def get_sequence():

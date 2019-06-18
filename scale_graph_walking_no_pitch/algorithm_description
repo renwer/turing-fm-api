@@ -1,0 +1,10 @@
+
+The algorithm implemented here is kind of dumb, but still works acceptable well.
+
+In the most basic version, the scale is represented as a graph with every point connected to each other.
+The edges of this graph are weighted by the subjective harmony of the interval between them.
+
+Start and end of the sequence are chosen randomly, and all the possible paths within a graph are initialized.
+After the solution space is generated, a random path is chosen and from that point a local maximum is reached via the
+Hill Climbing algorithm, with a cost function defined as the sum of all edges. This is done to ensure variability while
+achieving properly sounding sequences.
