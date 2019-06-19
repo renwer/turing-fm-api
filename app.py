@@ -1,14 +1,18 @@
-from flask import Flask
-import util
 import os
+
+from flask import Flask
+from scale_graph_walking_no_pitch import scale_graph_walking_no_pitch
 
 app = Flask(__name__)
 app.debug = True
 
+
+# edit the API endpoint structure to allow for multiple algorithms
 @app.route('/sequence')
 def sequence():
-    return util.get_sequence()
+    return scale_graph_walking_no_pitch.get_sequence()
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=os.environ.get('PORT'))
+    app.run()
+    # pp.run(host='0.0.0.0', port=os.environ.get('PORT'))
