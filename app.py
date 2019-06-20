@@ -16,5 +16,5 @@ def sequence():
 
 
 if __name__ == '__main__':
-    app.run()
-    # pp.run(host='0.0.0.0', port=os.environ.get('PORT'))
+    # app.run()
+    app.run(host='0.0.0.0', port=os.environ.get('PORT'))
