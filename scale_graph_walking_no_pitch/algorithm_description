@@ -1,5 +1,5 @@
 
-The algorithm implemented here is kind of dumb, but still works acceptable well.
+The algorithm implemented here is kind of dumb, but still works fairly well.
 
 In the most basic version, the scale is represented as a graph with every point connected to each other.
 The edges of this graph are weighted by the subjective harmony of the interval between them.
